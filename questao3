@@ -1,0 +1,48 @@
+
+programa {
+  funcao inicio() {
+      inteiro numero_filhos, total_filhos = 0 ,total_habitantes = 5 ,salario_ate_100 = 0
+        real salario, total_salarios = 0.0 ,maior_salario = 0.0 ,media_salario, media_filhos, percentual
+          
+        para ( inteiro i = 1; i <= total_habitantes; i++)  {
+          escreva(" Habitante ", i, " de ", total_habitantes, " \n")
+            
+            escreva("Digite o salário: R$ ")
+            leia(salario)
+            
+            escreva("Digite o número de filhos: ")
+            leia(numero_filhos)
+            escreva("\n")
+
+            
+            total_salarios = total_salarios + salario
+            total_filhos = total_filhos + numero_filhos
+
+            
+            se (salario > maior_salario)
+            {
+            maior_salario = salario
+            }
+
+          
+            se (salario <= 100.00)
+            {
+                salario_ate_100 = salario_ate_100 + 1
+            }
+        }
+
+        
+        media_salario = total_salarios / total_habitantes
+        media_filhos = total_filhos / total_habitantes
+        
+  
+        percentual = (salario_ate_100 * 100.0) / total_habitantes
+
+
+        escreva("RESULTADOS DA PESQUISA")
+        escreva("\nMédia do salário da população: R$ ", media_salario)
+        escreva("\nMédia do número de filhos: ", media_filhos)
+        escreva("\nMaior salário encontrado: R$ ", maior_salario)
+        escreva("\nPercentual de pessoas com salário até R$100,00: ", percentual, "%")
+        
+    }
